@@ -1,5 +1,56 @@
 .news {
+  cursor: pointer;
   height: 300px;
   width: 340px;
-  background: #000;
+  margin: 20px;
+  box-shadow: 0px 1px 10px -1px rgba(0, 0, 0, 0.322);
+  transition: .5s ease;
+
+  &:hover {
+    box-shadow: 0px 2px 11px 1px rgba(0, 0, 0, 0.322);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__head {
+    width: 100%;
+    height: 180px;
+  }
+
+  &__body {
+    padding: 1.3rem;
+    padding-left: 1.6rem;
+  }
+
+  &__title {
+    margin-top: 0;
+    font-size: 0.9rem;
+  }
+
+  &__time {
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+      background: url(../../static/img/calendar.svg)no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (max-width: $screen-lg) {
+    & {
+      width: 310px;
+    }
+  }
+
+  @media (max-width: $screen-sm) {
+    & {
+      margin: 0 auto;
+    }
+  }
 }
